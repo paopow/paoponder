@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // output: 'export',
+    output: 'export',
     // // basePath: '/paopow.github.io',
     // // assetPrefix: '/paopow.github.io/',
     // images: {
