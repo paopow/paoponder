@@ -8,7 +8,7 @@ export default function Home() {
       <div className={styles.center}>
 
       <Image
-          src="/paoponder/pao-laptop.png"
+          src="/pao-laptop.png"
           alt="Pao with a laptop"
           width={200}
           height={200}
