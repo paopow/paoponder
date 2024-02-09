@@ -14,7 +14,7 @@ export default function Home() {
           height={200}
         />
       </div>
-      <div>Paoponder is coming soon.</div>
+      <div>Paoponder is coming soon...</div>
 
     </main>
   );
