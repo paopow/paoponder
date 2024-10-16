@@ -15,7 +15,7 @@ export default function Home() {
         </div>
         <div className="column is-size-4">
           <div className="mt-5">
-          <div className="is-size-1 has-text-weight-bold">Hi, I'm Pao Siangliulue</div>
+          <div className="is-size-1 has-text-weight-bold">Hi, I&apos;m Pao Siangliulue</div>
             I am a research scientist at the&nbsp;
             <a href="https://allenai.org/">Allen Institute for AI</a> on
             the <a href="https://research.semanticscholar.org/">Semantic Scholar</a> team.&nbsp;
