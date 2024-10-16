@@ -31,7 +31,7 @@ export default function Home() {
             {/* Check out my publications list for what I have been thinking about or a blog post for recent thoughts      */}
           </p>
           <p className="mt-5">
-            I love painting and sketching. You can see my artwork on my <a href="https://www.instagram.com/siangliulue/">
+            I love painting and sketching. You can see my artwork on my <a href="https://www.instagram.com/siangliulue/" target="_blank">
             <FontAwesomeIcon icon={['fab', 'instagram']} size="xs" /> Instagram</a> profile.
           </p>
           <div className="mt-5 pt-3" style={{textDecoration: 0}}>
