@@ -31,7 +31,7 @@ export default function Home() {
               {/* Check out my publications list for what I have been thinking about or a blog post for recent thoughts      */}
             </p>
             <p className="mt-5">
-              I love painting and sketching. You can see my artwork on my <a href="https://www.instagram.com/siangliulue/" target="_blank">
+              I love painting and sketching. You can see my artwork on my <a href="https://www.instagram.com/paosiangliulue/" target="_blank">
               <FontAwesomeIcon icon={['fab', 'instagram']} size="xs" /> Instagram</a> profile.
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function Home() {
               </svg>
               &nbsp;Google Scholar
             </a>
-            <a href="https://www.instagram.com/siangliulue/" className="button is-primary is-rounded mr-2 mt-2" target="_blank">
+            <a href="https://www.instagram.com/paosiangliulue/" className="button is-primary is-rounded mr-2 mt-2" target="_blank">
               <FontAwesomeIcon icon={['fab', 'instagram']} size="xs" />&nbsp;Instagram
             </a>
           </div>
