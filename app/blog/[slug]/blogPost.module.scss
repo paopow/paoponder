@@ -1,0 +1,43 @@
+.blogContent {
+  padding-top: 1.5rem;
+  p {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  ol {
+    margin-left: 1.5rem;
+  }
+
+  ul {
+    margin-left: 1.5rem;
+  }
+
+  img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  p {
+    img + em {
+      display: block;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+}

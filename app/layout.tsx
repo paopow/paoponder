@@ -30,11 +30,11 @@ export default function RootLayout({
             <img src="/paoponder-logo-192.png" alt="Paoponder logo" /> PAO SIANGLIULUE
             </a>
           </div>
-          {/* <div className="navbar-end">
+          <div className="navbar-end">
             <a className="navbar-item" href="/blog">Blog</a>
-            <a className="navbar-item" href="/projects">Projects</a>
-            <a className="navbar-item" href="/about">Publications</a>
-          </div> */}
+            {/* <a className="navbar-item" href="/projects">Projects</a> */}
+            {/* <a className="navbar-item" href="/about">Publications</a> */}
+          </div>
         </nav>
         {children}
         <footer className="footer is-flex-align-items-flex-end mt-auto">
