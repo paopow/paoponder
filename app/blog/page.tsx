@@ -58,7 +58,6 @@ export default async function Blog(){
                                 {post.title}
                                 </Link>
                             </div>
-
                         </div>
                     )
                 })
