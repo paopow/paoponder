@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" className="has-navbar-fixed-top">
       <body className={inter.className}>
         <div className="is-fullheight">
-          <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+          <nav className="navbar is-fixed-top container" role="navigation" aria-label="main navigation">
             <input id="menu-switch" name="menu-switch" type="checkbox"/>
             <div className="navbar-brand">
               <a className="navbar-item" href="/">
