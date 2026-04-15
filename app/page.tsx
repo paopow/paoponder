@@ -22,21 +22,21 @@ export default function Home() {
             <div className="mt-5">
               I am a research scientist at the&nbsp;
               <a href="https://allenai.org/">Allen Institute for AI</a> on
-              the <a href="https://research.semanticscholar.org/">Semantic Scholar</a> team.&nbsp;
+              the <a href="https://allenai.org/asta/agents">Asta</a> team.&nbsp;
               Before AI2, I was a tech lead at <a href="https://www.b12.io/">B12</a>.
               I finished my Ph.D. in Computer Science at Harvard University.
               I was advised by <a href="https://www.eecs.harvard.edu/~kgajos/">Krzysztof Gajos</a>&nbsp;
-              from the <a href="https://iis.seas.harvard.edu/">Intelligent Interactive Systems Group</a>.
+              from the <a href="https://iis.seas.harvard.edu/">Intelligent Interactive Systems Group</a>.&nbsp;
+              Most of my publications are at HCI venues (e.g., CHI, UIST); some work also appears at NLP venues (e.g., ACL).
             </div>
             <p className="mt-5">
-              My research focuses on building systems to support human creativity and knowledge-based decision making.&nbsp;
-              I am particularly interested in human-AI collaboration to&nbsp;
-              synthesize existing information and generate new ideas.
+            I build and study systems that support human creativity and knowledge-based decision-making. Lately I've been especially interested in proactive, context-aware agents for research ideation, knowledge synthesis, and related tasks. I’m also broadly interested in human-AI collaboration.&nbsp;
+
               {/* Check out my publications list for what I have been thinking about or a blog post for recent thoughts      */}
             </p>
             <p className="mt-5">
-              I love painting and sketching. You can see my artwork on my <a href="https://www.instagram.com/paosiangliulue/" target="_blank">
-              <FontAwesomeIcon icon={faInstagram as IconProp} size="xs" /> Instagram</a> profile.
+              I love painting and sketching; I share pieces on my&nbsp;<a href="https://www.instagram.com/paosiangliulue/" target="_blank">
+              <FontAwesomeIcon icon={faInstagram as IconProp} size="xs" />&nbsp;Instagram</a> profile.
             </p>
           </div>
           <div className="mt-5 pt-3">
