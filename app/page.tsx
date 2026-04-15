@@ -1,10 +1,5 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faGithub, faInstagram, faFontAwesome } from '@fortawesome/free-brands-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { faTwitter, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export default function Home() {
@@ -30,7 +25,7 @@ export default function Home() {
               Most of my publications are at HCI venues (e.g., CHI, UIST); some work also appears at NLP venues (e.g., ACL).
             </div>
             <p className="mt-5">
-            I build and study systems that support human creativity and knowledge-based decision-making. Lately I've been especially interested in proactive, context-aware agents for research ideation, knowledge synthesis, and related tasks. I’m also broadly interested in human-AI collaboration.&nbsp;
+            I build and study systems that support human creativity and knowledge-based decision-making. Lately I&apos;ve been especially interested in proactive, context-aware agents for research ideation, knowledge synthesis, and related tasks. I&apos;m also broadly interested in human-AI collaboration.&nbsp;
 
               {/* Check out my publications list for what I have been thinking about or a blog post for recent thoughts      */}
             </p>
