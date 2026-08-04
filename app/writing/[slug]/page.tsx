@@ -5,15 +5,16 @@ import style from "./blogPost.module.scss";
 
 
 export async function generateStaticParams() {
-  const posts = await fs.readdir(path.join(process.cwd(), 'blog'));
+  const posts = await fs.readdir(path.join(process.cwd(), 'writing'));
   return posts.map((post) => ({
     slug: post.replace(/\.mdx$/, ''),
   }));
 }
 
-export default async function BlogPost({ params }: {params: {slug: string}}) {
+export default async function WritingPost({ params }: {params: {slug: string}}) {
   interface Frontmatter {
     path: string;
+    type: string;
     date: string;
     updated: string;
     title: string;
@@ -22,7 +23,7 @@ export default async function BlogPost({ params }: {params: {slug: string}}) {
     excerpt: string;
   }
 
-  const _content = await fs.readFile(path.join(process.cwd(), 'blog', `${params.slug}.mdx`), 'utf-8');
+  const _content = await fs.readFile(path.join(process.cwd(), 'writing', `${params.slug}.mdx`), 'utf-8');
   const { content, frontmatter } = await compileMDX<Frontmatter>({
     source: _content,
     options: {
@@ -31,15 +32,14 @@ export default async function BlogPost({ params }: {params: {slug: string}}) {
   });
   const date = new Date(frontmatter.date);
   const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  const typeLabel = frontmatter.type === 'note' ? 'Note' : 'Article';
   return (
-    // <div style={{backgroundColor:  "#F2CB05"}}>
     <div className="container section">
       <div className="is-size-2">{frontmatter.title}</div>
-      <div className="is-size-7">By Pao Siangliulue • {dateStr}</div>
+      <div className="is-size-7">{typeLabel} • By Pao Siangliulue • {dateStr}</div>
       <div className={style.blogContent}>
         {content}
       </div>
     </div>
-    // </div>
   )
 }

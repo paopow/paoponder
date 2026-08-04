@@ -40,7 +40,7 @@ export default function RootLayout({
 
             <div className="navbar-menu">
               <div className="navbar-end">
-                <a className="navbar-item" href="/blog">Blog</a>
+                <a className="navbar-item" href="/writing">Writing</a>
                 {/* <a className="navbar-item" href="/projects">Projects</a> */}
                 {/* <a className="navbar-item" href="/about">Publications</a> */}
               </div>
