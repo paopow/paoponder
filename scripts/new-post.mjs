@@ -3,8 +3,11 @@
 //
 //   yarn new-post "My Title" [--type note|article] [--tags a,b] [--lang en,th]
 //                            [--date YYYY-MM-DD] [--slug custom-slug]
+//                            [--title-th "ชื่อภาษาไทย"]
 //
 // Defaults: type=note, lang=en,th (bilingual), date=today, tags=none.
+// --title-th sets a distinct Thai title (only valid when Thai is a language);
+// omit it to share the single `title` across both languages.
 // The slug is derived from the title unless --slug is given.
 
 import { writeFile, access, mkdir } from 'node:fs/promises';
@@ -60,7 +63,7 @@ function fail(message) {
 }
 
 const USAGE =
-  'Usage: yarn new-post "Title" [--type note|article] [--tags a,b] [--lang en,th] [--date YYYY-MM-DD] [--slug custom-slug]';
+  'Usage: yarn new-post "Title" [--type note|article] [--tags a,b] [--lang en,th] [--date YYYY-MM-DD] [--slug custom-slug] [--title-th "…"]';
 
 const { opts, positional } = parseArgs(process.argv.slice(2));
 
@@ -91,6 +94,11 @@ for (const l of languages) {
   }
 }
 const uniqueLangs = [...new Set(languages)];
+
+const titleTh = opts['title-th'] && opts['title-th'] !== true ? String(opts['title-th']) : '';
+if (titleTh && !uniqueLangs.includes('th')) {
+  fail('--title-th was given but Thai is not in --lang. Add th to --lang, or drop --title-th.');
+}
 
 const tags = opts.tags
   ? String(opts.tags)
@@ -130,12 +138,14 @@ try {
   if (err.code !== 'ENOENT' && err.message?.startsWith('Error:')) throw err;
 }
 
+const esc = (s) => s.replace(/"/g, '\\"');
 const frontmatter = [
   '---',
   `type: "${type}"`,
   `languages: [${uniqueLangs.map((l) => `"${l}"`).join(', ')}]`,
   `date: "${date}"`,
-  `title: "${title.replace(/"/g, '\\"')}"`,
+  `title: "${esc(title)}"`,
+  ...(titleTh ? [`title_th: "${esc(titleTh)}"`] : []),
   `tags: [${tags.map((t) => `"${t}"`).join(', ')}]`,
   '---',
 ].join('\n');
