@@ -6,6 +6,7 @@ import WritingList, { WritingPost } from './WritingList';
 interface Frontmatter {
     path: string;
     type: string;
+    languages?: string[];
     date: string;
     updated: string;
     title: string;
@@ -29,7 +30,8 @@ export default async function Writing(){
             slug: postFile.replace(/\.mdx$/, ''),
             title: frontmatter.title,
             date: frontmatter.date,
-            type: frontmatter.type === 'note' ? 'note' : 'article'
+            type: frontmatter.type === 'note' ? 'note' : 'article',
+            languages: frontmatter.languages?.length ? frontmatter.languages : ['en']
         };
     }));
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_Thai } from "next/font/google";
 import "./globals.scss";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -7,6 +7,7 @@ config.autoAddCss = false;
 import React from 'react';
 
 const inter = Inter({ subsets: ["latin"] });
+const notoSansThai = Noto_Sans_Thai({ subsets: ["thai"], variable: "--font-thai" });
 
 export const metadata: Metadata = {
   title: "Pao Siangliulue",
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en" className="has-navbar-fixed-top">
+    <html lang="en" className={`has-navbar-fixed-top ${notoSansThai.variable}`}>
       <body className={inter.className}>
         <div className="is-fullheight">
           <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">

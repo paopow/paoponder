@@ -9,6 +9,14 @@ export interface WritingPost {
     title: string;
     date: string;
     type: string;
+    languages: string[];
+}
+
+function LanguageBadge({ languages }: { languages: string[] }) {
+    // Only flag posts that offer Thai; English-only posts show nothing.
+    if (!languages.includes('th')) return null;
+    const label = languages.includes('en') ? 'EN·ไทย' : 'ไทย';
+    return <span className="tag is-light ml-2 thai">{label}</span>;
 }
 
 type Filter = 'all' | 'note' | 'article';
@@ -50,6 +58,7 @@ export default function WritingList({ posts }: { posts: WritingPost[] }) {
                         </div>
                         <div className="column is-four-fifths">
                             <Link href={`/writing/${post.slug}`}>{post.title}</Link>
+                            <LanguageBadge languages={post.languages} />
                         </div>
                     </div>
                 );
